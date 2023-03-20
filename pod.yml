@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-pod
+  labels:
+    app: webapp-app
+spec:
+  containers:
+    - name: webapp-container
+      image: newtonsarker/webapp:1.0
+      ports:
+        - containerPort: 8080
