@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update && \
-    apt-get install -y wget ca-certificates && \
+    apt-get install -y curl wget ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
 RUN cd /tmp && \
@@ -23,7 +23,7 @@ CMD java -version
 CMD ["mkdir", "/home/application"]
 COPY ./app/build/install/app /home/application
 
+EXPOSE 8080
 ENTRYPOINT ["bash", "/home/application/bin/app"]
 
-# EXPOSE 8080
 # CMD ["bash", "/app/bin/app.sh"]
