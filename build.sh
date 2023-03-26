@@ -15,7 +15,7 @@ java --version
 
 # build image
 docker login -u "newtonsarker" docker.io
-docker image build -t newtonsarker/webapp:1.0 --platform linux/arm64 .
+docker image build -t newtonsarker/webapp:1.0 .
 docker image push newtonsarker/webapp:1.0
 # docker run -d -p 8080:8080 --name webapp newtonsarker/webapp:1.0
 # docker run -it --name webapp newtonsarker/webapp:1.0 /bin/bash
